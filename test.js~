@@ -1,0 +1,6 @@
+var fs = require('fs');
+
+var data = fs.readFileSync('index.html');
+var bf = new Buffer(data);
+
+bf.toString('utf-8');
