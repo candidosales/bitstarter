@@ -8,8 +8,9 @@ app.get('/', function(request, response) {
 fs.readFileSync('index.html', function (err, data) {
   if (err) throw err;
   console.log(data);
+ response.send(data);
   var buf = new Buffer(data);
-  response.send(buf.write());
+ // response.send(buf.write());
 
 });
 
