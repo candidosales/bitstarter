@@ -9,7 +9,7 @@ fs.readFileSync('index.html', function (err, data) {
   if (err) throw err;
   console.log(data);
   var buf = new Buffer(data);
-  response.send(buf.toString());
+  response.send(buf.write());
 
 });
 
